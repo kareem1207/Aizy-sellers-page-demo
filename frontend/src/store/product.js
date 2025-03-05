@@ -26,6 +26,9 @@ export const useProductStore = create((set) => ({
   deleteProduct: async (id) => {
     const res = await fetch(`/api/products/${id}`, {
       method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
     const data = await res.json();
     if (!data.success) return { success: false, message: data.message };
