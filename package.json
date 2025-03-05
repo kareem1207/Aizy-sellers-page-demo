@@ -1,0 +1,20 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node --env-file=.env --watch backend/server.js ",
+    "build":"npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "node --env-file=.env backend/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "description": "",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.2.4",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.0"
+  }
+}
